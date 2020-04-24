@@ -1,8 +1,15 @@
 package model;
 
-public class Receipt {
-    SaleInformation saleInformation;
-    String storeName;
-    String storeAddress;
-    
+class Receipt {
+    private SaleInformation saleInformation;
+    private String storeName;
+    private String storeAddress;
+
+    Receipt()
+    {
+        storeName = "Ica";
+        storeAddress = "Stångholmsbacken 38";
+        saleInformation = new SaleInformation();
+    }
+
 }

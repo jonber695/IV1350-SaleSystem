@@ -6,6 +6,7 @@ public class Controller {
     private ExternalInventorySystem externalInventorySystem;
     private Register register;
     private Printer printer;
+    private Sale sale;
 
     public Controller(ExternalAccountingSystem _AccountingSystem, ExternalInventorySystem _InventorySystem, Printer _Printer, Register _Register)
     {
@@ -15,5 +16,8 @@ public class Controller {
         register = _Register;
     }
 
-    
+    public void startSale()
+    {
+        sale = new Sale();
+    }
 }

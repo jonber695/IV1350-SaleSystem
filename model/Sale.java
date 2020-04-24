@@ -6,9 +6,9 @@ public class Sale {
     LocalTime saleTime;
     List<Item> items;
 
-    public Sale(Receipt _Receipt)
+    public Sale()
     {
-        receipt = _Receipt;
+        receipt = new Receipt();
         saleTime = LocalTime.now();
     }
 }

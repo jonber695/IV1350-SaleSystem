@@ -9,6 +9,6 @@ public class View {
 
     public void userInterface()
     {
-        //This is where the whole program is going to happen
+        contr.startSale();
     }
 }
