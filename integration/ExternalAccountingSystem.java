@@ -1,5 +1,6 @@
 package integration;
 
-public class ExternalAccountingSystem {
+public class ExternalAccountingSystem 
+{
 
 }

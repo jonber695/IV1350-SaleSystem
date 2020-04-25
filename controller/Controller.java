@@ -20,4 +20,9 @@ public class Controller {
     {
         sale = new Sale();
     }
+
+    public void scanItems(int itemID)
+    {
+        sale.registerItems(itemID, externalInventorySystem);
+    }
 }
