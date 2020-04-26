@@ -16,7 +16,10 @@ public class Sale {
 
     public void registerItems(int itemID, ExternalInventorySystem externalInventorySystem)
     {
-        boolean itemAlreadyRegistered = items.contains(externalInventorySystem.getItem(itemID));
+        boolean itemAlreadyRegistered = false;
+        for (Item item : items) {
+            itemAlreadyRegistered = (item.getName() == externalInventorySystem.getItem(itemID).getName()) ? true : false;
+        }
         if(itemAlreadyRegistered == false)
             items.add(externalInventorySystem.getItem(itemID));
         else
@@ -26,5 +29,8 @@ public class Sale {
                     item.updateQuantity();
             }
         }
+       
+
     }
+
 }
