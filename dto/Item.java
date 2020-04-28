@@ -1,22 +1,36 @@
 package dto;
 
+/**
+ * The class that represents an item
+ */
 public class Item {
     private int itemID;
     private String name;
     private float price;
     private String itemDiscription;
-    private int vatRate;
+    private float vatRate;
     private int quantity;
 
-    public Item(int _itemID, String _name, float _price, String _itemDiscription, int _VARrate, int _quantity)
+    /**
+     * creates an instance of item with these charactaristics:
+     * 
+     * @param _itemID is used to indentify which item it is
+     * @param _name the name of the item
+     * @param _price the price of the item
+     * @param _itemDiscription Describes the itme
+     * @param _VATrate Tells the VAT Rate, either 6, 12 or 25%
+     * @param _quantity
+     */
+    public Item(int _itemID, String _name, float _price, String _itemDiscription, float _VATrate, int _quantity)
     {
         itemID = _itemID;
         name = _name;
         price = _price;
         itemDiscription = _itemDiscription;
-        vatRate = _VARrate;
+        vatRate = _VATrate;
         quantity = _quantity;
     }
+
     public int getItemID()
     {
         return itemID;
@@ -37,7 +51,7 @@ public class Item {
         return itemDiscription;
     }
 
-    public int getVATrate()
+    public float getVATrate()
     {
         return vatRate;
     }
@@ -47,8 +61,16 @@ public class Item {
         return quantity;
     }
 
+    /**
+     * updates the quantity of items
+     */
     public void updateQuantity()
     {
         quantity++;
+    }
+
+    public String toString()
+    {
+        return "Name: " + name + " Price : " + price + " Quantity: " + quantity;
     }
 }

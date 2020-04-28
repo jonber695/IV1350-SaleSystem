@@ -1,6 +1,10 @@
 package integration;
 
 public class Register {
-    private int totalPrice;
-    
+    private float moneyInRegister;
+
+    public void increaseAmountInRegister(float amountPaid)
+    {
+        moneyInRegister += amountPaid;
+    }
 }
